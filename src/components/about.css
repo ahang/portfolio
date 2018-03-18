@@ -1,0 +1,37 @@
+/* .block {
+  &__about {
+    text-align: left;
+  }
+} */
+.icon {
+  margin-right: 14px;
+}
+.block__about {
+  text-align: left;
+}
+.block {
+  text-align: left;
+}
+
+.far {
+  display: inline-block;
+  font-size: inherit;
+  margin-right: 14px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fas {
+  display: inline-block;
+  font-size: inherit;
+  margin-right: 14px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #9b9b9b;
+}
