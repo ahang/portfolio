@@ -3,6 +3,53 @@ import './about.css';
 
 class About extends Component {
   render() {
+    const certificates = [
+      {
+        title: 'Full Stack Web Developer Certificate',
+        company: 'Northwestern Coding Bootcamp',
+        length: '2017'
+      },
+      {
+        title: 'Front-End Web Developer Nanodegree',
+        company: 'UDACITY',
+        length: '2016'
+      }
+    ];
+    const experiences = [
+      {
+        title: 'Web Application Developer',
+        company: 'LLT Group',
+        length: '2017 - Present'
+      },
+      {
+        title: 'QA & Forms Specialist',
+        company: 'Best Case, LLC',
+        length: '2016 - 2017',
+      },
+      {
+        title: 'Tech Support Specialist',
+        company: 'Best Case, LLC',
+        length: '2013 - 2016'
+      }
+    ];
+    const certMap = certificates.map(certifcate => {
+      return <div className="block">
+        <h5>{ certifcate.title }</h5>
+        <ul className="icon-list">
+          <li><i className="icon far fa-building"></i>{ certifcate.company }</li>
+          <li><i className="icon far fa-clock"></i>{ certifcate.length }</li>
+        </ul>
+      </div>
+    });
+    const expMap = experiences.map(experience => {
+      return <div className="block">
+        <h5>{ experience.title }</h5>
+        <ul className="icon-list">
+          <li><i className="icon far fa-building"></i>{ experience.company }</li>
+          <li><i className="icon far fa-clock"></i>{ experience.length }</li>
+        </ul>
+      </div>
+    })
     return(
       <div className="container">
         <div className="row">
@@ -17,45 +64,12 @@ class About extends Component {
           <div className="col">
             <i className="fas fa-briefcase"></i>            
             <h3>Work Experience</h3>
-            <div className="block">
-              <h5>Web Application Developer</h5>
-              <ul className="icon-list">
-                <li><i className="icon  far fa-building"></i>LLT Group</li>
-                <li><i className="icon  far fa-clock"></i>2017 - Present</li>
-              </ul>
-            </div>
-            <div className="block">
-              <h5>QA & Forms Specialist</h5>
-              <ul className="icon-list">
-                <li><i className="icon far fa-building"></i>Best Case, LLC</li>
-                <li><i className="icon  far fa-clock"></i>2016 - 2017</li>
-              </ul>
-            </div>
-            <div className="block">
-              <h5>Tech Support Specialist</h5>
-              <ul className="icon-list">
-                <li><i className="icon  far fa-building"></i>Best Case, LLC</li>
-                <li><i className="icon  far fa-clock"></i>2013 - 2016</li>
-              </ul>
-            </div>
+            { expMap }
           </div>
           <div className="col">
             <i className="fas fa-certificate"></i>            
             <h3>Certifcations</h3>
-            <div className="block">
-              <h5>Full Stack Web Developer Certificate</h5>
-              <ul className="icon-list">
-                <li><i className="icon far fa-building"></i>Northwestern University Coding Bootcamp</li>
-                <li><i className="icon far fa-clock"></i>2017</li>
-              </ul>
-            </div>
-            <div className="block">
-              <h5>Front-End Web Developer Nanodegree</h5>
-              <ul className="icon-list">
-                <li><i className="icon far fa-building"></i>UDACITY</li>
-                <li><i className="icon far fa-clock-o"></i>2016</li>
-              </ul>
-            </div>
+            { certMap }
           </div>
         </div>
       </div>
