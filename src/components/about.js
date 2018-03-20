@@ -7,28 +7,34 @@ class About extends Component {
     const experiences = this.props.experiences;
     const about = this.props.about;
 
-    const aboutMap = about.map(about => {
-      return <p className="block__about">{ about }</p>
-    })
+    const aboutMap = about.map((about, index) => {
+      return <p className="block__about" key={index}>{about}</p>
+      }
+    );
 
-    const certMap = certificates.map(certifcate => {
-      return <div className="block">
-        <h5>{ certifcate.title }</h5>
+    const certMap = certificates.map((certifcate, index) => {
+      return( 
+      <div className="block" key={index}>
+        <h5>{certifcate.title}</h5>
         <ul className="icon-list">
-          <li><i className="icon far fa-building"></i>{ certifcate.company }</li>
-          <li><i className="icon far fa-clock"></i>{ certifcate.length }</li>
+          <li><i className="icon far fa-building"></i>{certifcate.company}</li>
+          <li><i className="icon far fa-clock"></i>{certifcate.length}</li>
         </ul>
       </div>
+      )
     });
-    const expMap = experiences.map(experience => {
-      return <div className="block">
-        <h5>{ experience.title }</h5>
+
+    const expMap = experiences.map((experience, index) => {
+      return (      
+      <div className="block" key={index}>
+        <h5>{experience.title}</h5>
         <ul className="icon-list">
-          <li><i className="icon far fa-building"></i>{ experience.company }</li>
-          <li><i className="icon far fa-clock"></i>{ experience.length }</li>
+          <li><i className="icon far fa-building"></i>{experience.company}</li>
+          <li><i className="icon far fa-clock"></i>{experience.length}</li>
         </ul>
       </div>
-    })
+      )
+    });
     return(
       <div className="container">
         <div className="row">
@@ -36,18 +42,18 @@ class About extends Component {
             <i className="far fa-user"></i>
             <h3>About Me</h3>
             <div className="block">
-              { aboutMap }
+              {aboutMap}
             </div>
           </div>
           <div className="col">
             <i className="fas fa-briefcase"></i>            
             <h3>Work Experience</h3>
-            { expMap }
+            {expMap}
           </div>
           <div className="col">
             <i className="fas fa-certificate"></i>            
             <h3>Certifcations</h3>
-            { certMap }
+            {certMap}
           </div>
         </div>
       </div>
