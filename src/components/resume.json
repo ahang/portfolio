@@ -33,6 +33,27 @@
         "length": "2013 - 2016"
       }
     ],
-    "skills": []
+    "skills": [
+      {
+        "type": "Front-End",
+        "language": "JavaScript",
+        "frameworks": [
+          "Angular",
+          "React"
+        ],
+        "databases": null
+      },
+      {
+        "type": "Back-End",
+        "language": "NodeJS",
+        "databases": [
+          "MySQL",
+          "MongoDB"
+        ],
+        "frameworks": [
+          "Express"
+        ]
+      }
+    ]
   }
 }

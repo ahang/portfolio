@@ -6,6 +6,7 @@ class About extends Component {
     const certificates = this.props.certificates;
     const experiences = this.props.experiences;
     const about = this.props.about;
+    const skills = this.props.skills;
 
     const aboutMap = about.map((about, index) => {
       return <p className="block__about" key={index}>{about}</p>
@@ -35,6 +36,16 @@ class About extends Component {
       </div>
       )
     });
+
+    const skillsMap = skills.map((skill, index) => {
+      return (
+        <div className="block" key={index}>
+          <h4>{skill.type}</h4>
+          <h6>{skill.language}</h6>
+          <h5>{skill.frameworks.map(framework => {return <p>{framework}</p>})}</h5>
+        </div> 
+      )
+    })
     return(
       <div className="container">
         <div className="row">
@@ -56,6 +67,7 @@ class About extends Component {
             {certMap}
           </div>
         </div>
+        <div className="row">{skillsMap}</div>
       </div>
     )
   }

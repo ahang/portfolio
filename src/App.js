@@ -9,12 +9,13 @@ class App extends Component {
   render() {
     console.log(resume)
     return (
-      <div className="App">
+      <div className="App container-fluid">
         <Header />
         <About 
           about={resume.about} 
           certificates={resume.certificates} 
-          experiences={resume.experiences} />
+          experiences={resume.experiences} 
+          skills={resume.skills} />
         <Footer />
       </div>
     );
