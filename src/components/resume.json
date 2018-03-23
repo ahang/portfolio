@@ -35,23 +35,28 @@
     ],
     "skills": [
       {
-        "type": "Front-End",
-        "language": "JavaScript",
-        "frameworks": [
+        "front_end": [
           "Angular",
-          "React"
-        ],
-        "databases": null
+          "React",
+          "JavaScript",
+          "Sass"
+        ]
       },
       {
-        "type": "Back-End",
-        "language": "NodeJS",
-        "databases": [
+        "back_end": [
+          "NodeJS",
+          "Express",
           "MySQL",
-          "MongoDB"
-        ],
-        "frameworks": [
-          "Express"
+          "MongoDB",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "other":  [
+          "Agile",
+          "Jasmine / Karma",
+          "Heroku",
+          "Github / Gitlab"
         ]
       }
     ]

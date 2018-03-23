@@ -38,11 +38,19 @@ class About extends Component {
     });
 
     const skillsMap = skills.map((skill, index) => {
+      const front_end = skill.front_end;
+      console.log(`front_end`, front_end)
+      // const back_end = skill.back_end;
+      // const other = skill.other;
       return (
-        <div className="block" key={index}>
-          <h4>{skill.type}</h4>
-          <h6>{skill.language}</h6>
-          <h5>{skill.frameworks.map(framework => {return <p>{framework}</p>})}</h5>
+        <div className="block">
+          <div className="row">
+            <div className="col">
+              <ul>
+                {front_end.map((js, index) => <li key={index}>{js}</li>)}
+              </ul>
+            </div>
+          </div>
         </div> 
       )
     })
